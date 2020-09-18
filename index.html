@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Client Statisfaction Survey Form</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1 id="title" class="text-center">Client Statisfaction Survey Form</h1>
+        <p id="description" class="description text-center">
+          Thank you for taking the time to help us improve the service
+        </p>
+      </header>
+      <form
+        id="survey-form"
+        name="contact"
+        method="POST"
+        data-netlify="true"
+        netlify-honeypot="bot-field"
+        data-netlify-recaptcha="true"
+      >
+        <div class="form-group">
+          <label id="name-label" for="name">Name:</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            class="form-control"
+            placeholder="Enter your name"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label id="email-label" for="email">Email:</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="form-control"
+            placeholder="Enter your Email"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <p>Means of service attainment:</p>
+          <select id="most-like" name="mostLike" class="form-control" required>
+            <option disabled selected value>Select an option</option>
+            <option value="upwork">Upwork</option>
+            <option value="fiverr">Fiverr</option>
+            <option value="freelancer">Freelancer</option>
+            <option value="peopleperhour">PeoplePerHour</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label id="number-label" for="number">Project Id:</label>
+          <input
+            type="number"
+            name="age"
+            id="number"
+            min="1"
+            max="99"
+            class="form-control"
+            placeholder="Project Id Number"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <p>Is this the first time you are using our Products and services?</p>
+          <select id="dropdown" name="role" class="form-control" required>
+            <option disabled selected value>Select option</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <p>Would you recommend us to a friend?</p>
+          <label>
+            <input
+              name="user-recommend"
+              value="definitely"
+              type="radio"
+              class="input-radio"
+              checked
+            />Definitely</label
+          >
+          <label>
+            <input
+              name="user-recommend"
+              value="maybe"
+              type="radio"
+              class="input-radio"
+            />Maybe</label
+          >
+
+          <label
+            ><input
+              name="user-recommend"
+              value="not-sure"
+              type="radio"
+              class="input-radio"
+            />Not sure</label
+          >
+        </div>
+
+        <div class="form-group">
+          <p>
+            What would you like to see improved?
+            <span class="clue">(Check all that apply)</span>
+          </p>
+
+          <label
+            ><input
+              name="prefer"
+              value="res=-enquiry"
+              type="checkbox"
+              class="input-checkbox"
+            />Response to the Enquiry</label
+          >
+          <label>
+            <input
+              name="prefer"
+              value="completion-with-specifications"
+              type="checkbox"
+              class="input-checkbox"
+            />Product completion in accordance with specifications</label
+          >
+          <label
+            ><input
+              name="prefer"
+              value="manuals-test-reports"
+              type="checkbox"
+              class="input-checkbox"
+            />Availability of relevant manuals/test reports along with
+            project</label
+          >
+          <label
+            ><input
+              name="prefer"
+              value="communication"
+              type="checkbox"
+              class="input-checkbox"
+            />Communication of required information</label
+          >
+          <label
+            ><input
+              name="prefer"
+              value="quality"
+              type="checkbox"
+              class="input-checkbox"
+            />Quality of service provided</label
+          >
+          <label
+            ><input
+              name="prefer"
+              value="hospitality"
+              type="checkbox"
+              class="input-checkbox"
+            />Hospitality extended</label
+          >
+          <label
+            ><input
+              name="prefer"
+              value="res-to-req"
+              type="checkbox"
+              class="input-checkbox"
+            />Response to your request/variations</label
+          >
+          <label
+            ><input
+              name="prefer"
+              value="res-to-problems"
+              type="checkbox"
+              class="input-checkbox"
+            />Response to the problems/complaints</label
+          >
+          <label
+            ><input
+              name="prefer"
+              value="delivery"
+              type="checkbox"
+              class="input-checkbox"
+            />Delivery performance</label
+          >
+          <label
+            ><input
+              name="prefer"
+              value="value-for-money"
+              type="checkbox"
+              class="input-checkbox"
+            />Value for money</label
+          >
+        </div>
+
+        <div class="form-group">
+          <p>Any comments or suggestions?</p>
+          <textarea
+            id="comments"
+            class="input-textarea"
+            name="comment"
+            placeholder="Enter your comment here..."
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <button type="submit" id="submit" class="submit-button">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <script src="bundle.js"></script>
+  </body>
+</html>
