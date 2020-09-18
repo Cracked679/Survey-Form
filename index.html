@@ -24,7 +24,7 @@
       <form
         id="survey-form"
         name="contact"
-        method="POST"
+        action="POST"
         data-netlify="true"
         netlify-honeypot="bot-field"
         data-netlify-recaptcha="true"
@@ -213,6 +213,11 @@
           ></textarea>
         </div>
 
+        <div class="form-group hidden">
+          <p>Don’t fill this out if you're human: <input name="bot-field" /></p>
+        </div>
+
+        <div data-netlify-recaptcha="true"></div>
         <div class="form-group">
           <button type="submit" id="submit" class="submit-button">
             Submit

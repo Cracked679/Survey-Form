@@ -177,4 +177,8 @@ form {
     cursor: pointer;
 }
 
+.hidden {
+    display: none;
+}
+
 /*# sourceMappingURL=style.css.map */
